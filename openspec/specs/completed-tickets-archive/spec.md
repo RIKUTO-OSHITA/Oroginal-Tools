@@ -1,0 +1,30 @@
+# completed-tickets-archive Specification
+
+## Purpose
+
+TBD - created by archiving change ticket-management-app. Update Purpose after archive.
+
+## Requirements
+
+### Requirement: 完了チケットページ
+
+システムは、ステータスが「Done」であるすべてのチケットを一覧表示する専用ページを提供しなければならない(SHALL)。
+
+#### Scenario: 完了チケットの閲覧
+
+- **WHEN** ユーザーが完了チケットページに遷移する
+- **THEN** システムは、ステータスが「Done」であるすべてのチケットを、少なくともIDと名前を含めて表示する
+
+#### Scenario: 新たに完了したチケットのアーカイブへの反映
+
+- **WHEN** チケットのステータスが「Done」に変更される
+- **THEN** システムはそのチケットを完了チケットページに表示し、アクティブなボードには表示しない
+
+### Requirement: 完了チケット詳細への遷移
+
+システムは、完了チケットページから該当チケットの詳細ページへユーザーが遷移できるようにしなければならない(SHALL)。
+
+#### Scenario: 完了チケットのクリック
+
+- **WHEN** ユーザーが完了チケットページ上のチケットをクリックする
+- **THEN** システムはそのチケットの詳細ページ(固有URL)へ遷移する
